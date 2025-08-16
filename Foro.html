@@ -3,15 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biblioteca Uni Lutero</title>
+  <title>Foro - Universidad Martin Lutero</title>
+  <!-- Enlace al CSS -->
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f4f9fc;
@@ -38,7 +33,7 @@
       font-size: 24px;
     }
 
-    /* Menú con botones usando paleta de colores */
+    /* Menú con botones frescos */
     nav {
       margin: 20px 0;
     }
@@ -56,12 +51,12 @@
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
-    /* Colores para cada botón usando paleta */
-    nav button.inicio { background: #3791af; }       /* azul header */
-    nav button.biblioteca { background: #97ddf2; color: #333; } /* celeste nav */
-    nav button.foro { background: #4fb0c6; }        /* azul intermedio */
-    nav button.acerca { background: #66c2d5; }      /* celeste más claro */
-    nav button.contacto { background: #3791af; }    /* azul header */
+    /* Colores diferentes para cada botón */
+    nav button.inicio { background: #4caf50; }     /* verde */
+    nav button.biblioteca { background: #00bcd4; } /* celeste */
+    nav button.foro { background: #ff9800; }       /* naranja/amarillo */
+    nav button.acerca { background: #8bc34a; }     /* verde claro */
+    nav button.contacto { background: #03a9f4; }   /* azul celeste */
 
     nav button:hover {
       transform: translateY(-2px);
@@ -86,6 +81,42 @@
       margin-bottom: 20px;
     }
 
+    /* Temas */
+    .tema {
+      background: #e0f7fa;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    /* Formulario de comentarios */
+    .formulario textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    .formulario button {
+      margin-top: 10px;
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .formulario button:hover {
+      background: #45a049;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
     /* Footer */
     footer {
       background: #3791af;
@@ -94,6 +125,7 @@
       padding: 10px;
       margin-top: 20px;
     }
+
   </style>
 </head>
 <body>
@@ -104,7 +136,7 @@
     <h1>Universidad Martin Lutero</h1>
   </header>
 
-  <!-- Menú con botones decorativos -->
+  <!-- Menú con botones -->
   <nav>
     <button class="inicio" onclick="location.href='index.html'">🏠 Inicio</button>
     <button class="biblioteca" onclick="location.href='Biblioteca.html'">📚 Biblioteca</button>
@@ -113,18 +145,28 @@
     <button class="contacto" onclick="location.href='Contacto.html'">📞 Contacto</button>
   </nav>
 
-  <!-- Contenido -->
+  <!-- Contenido Foro -->
   <main>
-    <h2>Bienvenido a U.F.E.C.A</h2>
-    <p>
-      Foros guardan nuestro saber cada día.  
-      Estructuras guían la labor con armonía.  
-      Compartir ideas enciende la mente.  
-      Ayudar a otros hace el sueño presente.
-    </p>
+    <h2>Foro de Discusión</h2>
+    
+    <div class="tema">
+        <h3>Tema 1: ¿Qué opinas sobre la tecnología actual?</h3>
+        <p>Usuario1: Creo que la tecnología está avanzando muy rápido.</p>
+        <p>Usuario2: Sí, pero también debemos considerar los riesgos.</p>
+    </div>
+    
+    <div class="tema">
+        <h3>Tema 2: ¿Cuál es tu lenguaje de programación favorito?</h3>
+        <p>Usuario3: Me encanta Python por su simplicidad.</p>
+    </div>
 
-    <h2>Novedades</h2>
-    <p>Aquí puedes compartir noticias, artículos o cualquier contenido importante de la universidad.</p>
+    <div class="formulario">
+        <h3>Agregar un nuevo comentario</h3>
+        <form action="#" method="post">
+            <textarea name="comentario" placeholder="Escribe tu comentario aquí..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -134,20 +176,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
